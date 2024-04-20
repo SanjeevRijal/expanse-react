@@ -8,7 +8,7 @@ function Chart() {
 
   useEffect(() => {
     axios
-      .get("https://expense-management-ncvd.onrender.com/chart_data", {
+      .get("https://expense-management-dvcv.onrender.com/chart_data", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

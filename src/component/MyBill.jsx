@@ -44,7 +44,7 @@ function MyBill(){
 
 
     useEffect(()=>{
-        axios.get("https://expense-management-ncvd.onrender.com/my_bill", {headers: {
+        axios.get("https://expense-management-dvcv.onrender.com/my_bill", {headers: {
             Authorization: `Bearer ${accessToken}`
           }})
         .then(response=>{
