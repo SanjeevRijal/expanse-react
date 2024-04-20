@@ -59,7 +59,7 @@ function AddBill (){
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('http://127.0.0.1:5000/add_bill', {
+        axios.post('https://expense-management-ncvd.onrender.com/add_bill', {
             formData, checkBox
           },{
             headers: {
@@ -91,7 +91,7 @@ function AddBill (){
     
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:5000/user", {
+        axios.get("https://expense-management-ncvd.onrender.com/user", {
             headers: {
               Authorization: `Bearer ${accessToken}`
             }

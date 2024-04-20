@@ -8,7 +8,7 @@ function Chart() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/chart_data", {
+      .get("https://expense-management-ncvd.onrender.com/chart_data", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

@@ -44,7 +44,7 @@ function ResetPassword(){
             setErrors(emailError)
             return
         }
-        axios.post('http://127.0.0.1:5000/validate_email', 
+        axios.post('https://expense-management-ncvd.onrender.com/validate_email', 
             formData
           )
           .then((response)=> {

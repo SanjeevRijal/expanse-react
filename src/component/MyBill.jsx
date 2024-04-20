@@ -25,7 +25,7 @@ function MyBill(){
     })
 
     function handleclick(bill_id){
-        axios.post( "http://127.0.0.1:5000/delete_bill",{
+        axios.post( "https://expense-management-ncvd.onrender.com/delete_bill",{
                 bill_id
         },{headers: {
             Authorization: `Bearer ${accessToken}`
@@ -44,7 +44,7 @@ function MyBill(){
 
 
     useEffect(()=>{
-        axios.get("http://127.0.0.1:5000/my_bill", {headers: {
+        axios.get("https://expense-management-ncvd.onrender.com/my_bill", {headers: {
             Authorization: `Bearer ${accessToken}`
           }})
         .then(response=>{

@@ -27,7 +27,7 @@ function MyBill(){
 
     useEffect(()=>{
         const accessToken = localStorage.getItem('accessToken');
-        axios.get("http://127.0.0.1:5000/all_bill", {headers: {
+        axios.get("https://expense-management-ncvd.onrender.com/all_bill", {headers: {
             Authorization: `Bearer ${accessToken}`
           }})
         .then(response=>{

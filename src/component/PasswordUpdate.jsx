@@ -59,7 +59,7 @@ function UpdatePassword (){
             return;
         }
 
-    axios.post('http://127.0.0.1:5000//conform_token', {"token":token})
+    axios.post('https://expense-management-ncvd.onrender.com/conform_token', {"token":token})
     .then(response => {
         if (response.status === 200) {
             setFormData({
@@ -67,7 +67,7 @@ function UpdatePassword (){
                 conformPassword: "",
             })
 
-            axios.post("http://127.0.0.1:5000/update_password" ,{"formData":formData, "token":token})
+            axios.post("https://expense-management-ncvd.onrender.com/update_password" ,{"formData":formData, "token":token})
             .then(response =>{
                 if (response.status===200){
                     setSuccessMessage(response.data.message)
