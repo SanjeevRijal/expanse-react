@@ -59,7 +59,7 @@ function AddBill (){
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('https://expense-management-dvcv.onrender.com/add_bill', {
+        axios.post('https://expense-management-4m4u.onrender.com/add_bill', {
             
             formData, checkBox
           },{
@@ -92,7 +92,7 @@ function AddBill (){
     
 
     useEffect(()=>{
-        axios.get("https://expense-management-dvcv.onrender.com/user", {
+        axios.get("https://expense-management-4m4u.onrender.com/user", {
             headers: {
               Authorization: `Bearer ${accessToken}`
             }

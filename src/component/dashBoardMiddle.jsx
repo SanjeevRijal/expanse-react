@@ -14,7 +14,8 @@ function Middle() {
     const [usersSpend, setUserSpend] = useState([]);
 
     useEffect(() => {
-        axios.get("https://expense-management-dvcv.onrender.com/payment_details",{
+        
+        axios.get("https://expense-management-4m4u.onrender.com/payment_details",{
             headers: {
               Authorization: `Bearer ${accessToken}`
             }

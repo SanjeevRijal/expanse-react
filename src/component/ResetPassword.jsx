@@ -44,7 +44,7 @@ function ResetPassword(){
             setErrors(emailError)
             return
         }
-        axios.post('https://expense-management-dvcv.onrender.com/validate_email', 
+        axios.post('https://expense-management-4m4u.onrender.com/validate_email', 
             formData
           )
           .then((response)=> {

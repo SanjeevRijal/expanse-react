@@ -59,7 +59,7 @@ function UpdatePassword (){
             return;
         }
 
-    axios.post('https://expense-management-dvcv.onrender.com/conform_token', {"token":token})
+    axios.post('https://expense-management-4m4u.onrender.com/conform_token', {"token":token})
     .then(response => {
         if (response.status === 200) {
             setFormData({
@@ -67,7 +67,7 @@ function UpdatePassword (){
                 conformPassword: "",
             })
 
-            axios.post("https://expense-management-dvcv.onrender.com/update_password" ,{"formData":formData, "token":token})
+            axios.post("https://expense-management-4m4u.onrender.com/update_password" ,{"formData":formData, "token":token})
             .then(response =>{
                 if (response.status===200){
                     setSuccessMessage(response.data.message)

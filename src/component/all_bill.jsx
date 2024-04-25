@@ -27,7 +27,7 @@ function MyBill(){
 
     useEffect(()=>{
         const accessToken = localStorage.getItem('accessToken');
-        axios.get("https://expense-management-dvcv.onrender.com/all_bill", {headers: {
+        axios.get("https://expense-management-4m4u.onrender.com/all_bill", {headers: {
             Authorization: `Bearer ${accessToken}`
           }})
         .then(response=>{
