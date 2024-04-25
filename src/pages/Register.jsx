@@ -80,7 +80,7 @@ function Register (){
             return;
         }
 
-    axios.post('https://expense-management-dvcv.onrender.com/register', formData)
+    axios.post('http://127.0.0.1:5000/register', formData)
     .then(response => {
         if (response.status == 200) {
             setResponseData("User Registration Successfull")

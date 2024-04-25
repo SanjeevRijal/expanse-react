@@ -58,7 +58,7 @@ function Login() {
             return;
         }
 
-        axios.post('https://expense-management-dvcv.onrender.com/login', 
+        axios.post('https://expense-management-d7jb.onrender.com/login', 
             formData
           )
           .then((response)=> {
@@ -78,6 +78,7 @@ function Login() {
             }
           })
           .catch(error => {
+                console.log(error)
                 setloginError("Invalid email or password")
           });
         }
