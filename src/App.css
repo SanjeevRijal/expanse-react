@@ -61,20 +61,20 @@ a:hover{
   display:grid;
   grid-template-columns: 1.5fr 3fr 2fr;
   grid-template-rows: 1fr; /* One row that takes up all available space */
-  height: 100vh;
+  margin-bottom: 40px;
+  gap:20px;
+  margin: 20px;
+
 
 }
 
-.nav, .main, .expense{
-  margin:20px; 
-}
 
 .all_bill{
   text-align: center;
 }
 
     
- .expense,.graph, .middle-Name-item,.form-class, .login-page,.all_bill,.nav-menu{
+ .expense,.graph, .middle-Name-item,.form-class, .login-page,.all_bill,.nav{
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -91,7 +91,7 @@ a:hover{
 
 
 .nav{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .active{
@@ -174,9 +174,6 @@ a:hover{
   opacity: 50%;
   text-align: left;
 }
-
-
-
 
 .added-date{
   opacity: 70%;
@@ -345,6 +342,10 @@ fieldset{
   margin-bottom: 0;
 
 }
+.nav-menu{
+  display: none;
+}
+
 @media (max-width: 805px) {
   .contianer {
     display: flex;
@@ -369,6 +370,9 @@ fieldset{
     flex-direction: column;
     z-index: 100;
     width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   }
 
   .nav{

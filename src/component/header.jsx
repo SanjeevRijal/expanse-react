@@ -23,7 +23,7 @@ function Header(){
             </div>
            
         </div>
-        {mobileNav && <MobileNav />}
+        {mobileNav && <MobileNav mobileNav ={mobileNav} />}
 
         
         </>

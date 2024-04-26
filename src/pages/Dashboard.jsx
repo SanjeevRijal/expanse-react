@@ -19,12 +19,12 @@ function DashBoard() {
 
     <div className="contianer">
 
-      <div className="nav">
+      <div className="nav mobile-nav">
         < Nav />
       </div>
         
       <div className="main">
-        <DashBoardMid mybill = {MyBill} />
+        <DashBoardMid  />
       </div>
 
       <div className="expense">

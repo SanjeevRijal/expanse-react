@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom"
 
-
-function Nav(){
+function Nav({mobileNav}){
     const style = NavLink.isActive?"active":""
 
     return(
         <>
-        <ul className="nav-menu">
+        <ul className={mobileNav?"nav-menu":""}>
         <li><NavLink to="/dashborad" 
             className={`nav-text ${style}` } ><i className='fas fa-table'></i>Dashboard
             </NavLink>
