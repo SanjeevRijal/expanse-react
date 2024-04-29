@@ -88,15 +88,14 @@ a:hover{
   gap:20px
 }
 
-
-
 .nav{
   padding-top: 20px;
 }
 
 .active{
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
+  color: rgb(20, 20, 20);
 }
 
 .expense{
@@ -142,7 +141,6 @@ a:hover{
 
 .spender-name{
   opacity: 0.6;
-  align-self: center;
 
 }
 
@@ -157,16 +155,17 @@ a:hover{
 }
 
 .transaction-item{
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   padding: 15px;
   border-bottom: 1px rgb(231, 226, 226) solid ;
-  justify-content:space-between;
   gap:25px
   
 }
 
 .catatory-date{
-  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .catagory{
@@ -178,18 +177,19 @@ a:hover{
 .added-date{
   opacity: 70%;
   color: rgb(152, 147, 147);
-  display: inline-block;
-  margin-left: 0;
+  align-self: flex-start;
+  
 }
 
 .total{
-  margin-left: auto;
   color:red;
+  margin-left: auto;
   
 }
 .total--update{
   display: flex;
   align-self: center;
+
 }
 
 .button-update{
@@ -266,6 +266,11 @@ fieldset{
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .pagination{

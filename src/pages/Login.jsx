@@ -1,12 +1,13 @@
 
 import Header from "../component/header"
-import React, { useState,useContext } from "react";
+import React, { useState,useContext, useEffect } from "react";
 import axios from 'axios';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { MyContext } from "../MyContext";
 import AlreadyLoggedIn from "./AlreadyLoggedIn";
 
 function Login() {
+    const[isLoading, setLoading] = useState(false)
     const {login , setLogin} = useContext(MyContext)
     const [loginError, setloginError] = useState("")
     const navigateTo = useNavigate();
@@ -61,6 +62,7 @@ function Login() {
         axios.post('https://expense-management-4m4u.onrender.com/login', 
             formData
           )
+          .then(setLoading(true))
           .then((response)=> {
             if(response.status===200){
                 setFormData({
@@ -74,11 +76,13 @@ function Login() {
                     login:!prev.login,
                     name:response.data.user_info.name}
                 })
+                setLoading(false)
                 navigateTo("/dashborad");
             }
           })
           .catch(error => {
                 console.log(error)
+                setLoading(false)
                 setloginError("Invalid email or password")
           });
         }
@@ -116,7 +120,7 @@ function Login() {
                 {errors.password && <span className="error">{errors.password}</span>}
                 
 
-                <button type="submit" className="submit-button">Login</button> 
+                <button type="submit" className={`submit-button ${isLoading?"disabled":""}`}>{!isLoading?"Login":"Loading..."}</button> 
 
                 <NavLink to = "/reset_password" className="reset-password"> Reset pasword
                     </NavLink>

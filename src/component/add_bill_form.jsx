@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function AddBill (){
+    const[isLoading, setLoading] = useState(false)
     const navigateTo = useNavigate()
     const accessToken = localStorage.getItem("accessToken")
 
@@ -67,6 +68,7 @@ function AddBill (){
               Authorization: `Bearer ${accessToken}`,
             },
           })
+          .then(setLoading(true))
           .then((response)=> {
             if(response.status===200){
                 setFormData({
@@ -74,6 +76,7 @@ function AddBill (){
                     amount: "",  
                 
                 })
+                setLoading(false)
 
                 navigateTo("/dashborad")
 
@@ -84,6 +87,7 @@ function AddBill (){
           })
           .catch(error => {
             console.log(error);
+            setLoading(false)
             navigateTo("/logout")
           });
         }
@@ -144,7 +148,7 @@ function AddBill (){
 
                 </fieldset>
 
-                <button className="submit-button">Submit</button>
+                <button className={`submit-button ${isLoading?"disabled":""}`}>{!isLoading?"Submit":"Sending..."}</button>
 
             </form> 
             
