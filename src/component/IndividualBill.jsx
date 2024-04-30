@@ -16,7 +16,7 @@ function Bill (props){
             }
 
             <div className="total--update">
-                <p className = "total">${props.amount}</p>
+                <p className = "total">${props.amount.toFixed( 2 )}</p>
                 {props.handelClick && <button className="button-update" onClick={()=>props.handelClick(props.bill_id)}><i className='fas fa-trash-alt'></i></button>}
             
             </div>

@@ -304,12 +304,18 @@ fieldset{
   padding: 20px 40px;
   margin-top: 40px;
  
-
 }
 
 .login-tetx{
   margin-bottom: 20px;
   color:rgb(53, 157, 202);
+}
+
+.register-section{
+  padding-top: 10px;
+  margin-top: 15px;
+  text-align: center;
+  border-top: 2px solid rgb(203, 197, 197);
 }
 
 .sign-up-link{
@@ -320,10 +326,12 @@ fieldset{
 }
 
 .reset-password{
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
-  display: inline-block;
   text-decoration: none;
-  color: rgb(158, 150, 150)
+  color: rgb(158, 150, 150);
+  
 }
 
 .fa-bars{

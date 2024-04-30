@@ -125,9 +125,12 @@ function Login() {
                 <NavLink to = "/reset_password" className="reset-password"> Reset pasword
                     </NavLink>
             </form>
-
-            <NavLink to= "/register" className="sign-up-link">SIgn Up
+            <div className="register-section">
+            <h4>Not registered yet ?</h4>
+        
+            <NavLink to= "/register" className="sign-up-link">Register now
             </NavLink>
+            </div>
             </div> </>:
              <AlreadyLoggedIn />
         }
