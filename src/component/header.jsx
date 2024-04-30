@@ -13,14 +13,14 @@ function Header(){
         <>
         <div className = "header">
             <div className = "logo">
-            <h5 className = "logo-text"><i className='fas fa-receipt'></i>HouseBill</h5>
-            <p className="mobile-welCome-text"> {login.name && `Welcome, ${ login.name}`}</p>
-                
+            <h5 className = "logo-text"><i className='fas fa-receipt'></i>HouseBill</h5>  
             </div>
             <div className ="user-info">
             <p className="desktop-welCome-text"> {login.name && `Welcome, ${ login.name}`}</p>
             {login.login && <button className="mobile-submit-button" onClick={handelClick}><i className='fas fa-bars'></i></button>}
             </div>
+            <p className="mobile-welCome-text"> {login.name && `Welcome, ${ login.name}`}</p>
+    
            
         </div>
         {mobileNav && <MobileNav mobileNav ={mobileNav} />}

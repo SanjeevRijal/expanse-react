@@ -141,7 +141,7 @@ a:hover{
 
 .spender-name{
   opacity: 0.6;
-
+  align-content: center;
 }
 
 
@@ -338,14 +338,6 @@ fieldset{
   display: none;
 }
 
-.footer{
-  text-align: center;
-  background-color: white;
-  padding:20px;
-  margin-top:auto;
-  margin-bottom: 0;
-
-}
 .nav-menu{
   display: none;
 }
@@ -358,10 +350,25 @@ fieldset{
     
   }
 
+
   .header{
   padding:10px;
   width: 100%;
   }
+
+  .header :nth-child(1) { order: 2; }
+  .header :nth-child(2) { order: 1; }
+  .header :nth-child(3) { order: 3; }
+
+  .logo-text, .fa-receipt{
+    font-size: 1.2rem;
+  }
+
+  .logo{
+    align-self: center;
+  }
+
+
 
   .top-main{
       display: grid;
